@@ -11,18 +11,19 @@
 
 <body>
 
-    <!-- ==============================
-         WEATHER / ATMOSPHERE
-    =============================== -->
+    <!-- =========================================
+         STORM BACKGROUND
+         ========================================= -->
 
     <div id="storm">
         <div class="rain"></div>
         <div class="lightning"></div>
     </div>
 
-    <!-- ==============================
+
+    <!-- =========================================
          START SCREEN
-    =============================== -->
+         ========================================= -->
 
     <section id="start-screen" class="screen active">
 
@@ -56,9 +57,9 @@
     </section>
 
 
-    <!-- ==============================
-         THEATER LOBBY
-    =============================== -->
+    <!-- =========================================
+         ACT I — THE LOBBY
+         ========================================= -->
 
     <section id="lobby" class="screen">
 
@@ -67,66 +68,175 @@
             <h1>THE LOBBY</h1>
         </div>
 
-        <div class="room">
 
-            <div class="door locked">
-                <div class="door-number">01</div>
-                <h2>THE WEATHER ROOM</h2>
-                <p>LOCKED</p>
+        <div class="lobby-container">
+
+            <!-- LEFT SIDE -->
+            <div class="lobby-door">
+
+                <div class="door locked">
+
+                    <div class="door-number">
+                        01
+                    </div>
+
+                    <div class="door-symbol">
+                        ⚡
+                    </div>
+
+                    <h2>
+                        THE WEATHER ROOM
+                    </h2>
+
+                    <p class="door-status">
+                        🔒 LOCKED
+                    </p>
+
+                </div>
+
             </div>
 
-            <div class="lobby-message">
 
-                <p class="loki-message">
+            <!-- RIGHT SIDE -->
+            <div class="lobby-content">
+
+                <div class="loki-message">
                     "Welcome, Cyberwall."
+                </div>
+
+                <p>
+                    You have entered a theater that should not exist.
                 </p>
 
                 <p>
-                    Someone has prepared something for you.
+                    The lights are on.
                 </p>
 
                 <p>
-                    Unfortunately...
+                    The storm is outside.
+                </p>
+
+                <p>
+                    And somewhere beyond the locked doors,
+                    fifteen people are waiting for you.
                 </p>
 
                 <p class="dramatic">
-                    ...they locked the doors.
+                    But first...
                 </p>
+
+
+                <!-- THE TICKET -->
+                <div class="ticket">
+
+                    <div class="ticket-top">
+                        <span>THE FINAL ACT</span>
+                        <span>ADMIT ONE</span>
+                    </div>
+
+                    <div class="ticket-main">
+
+                        <div class="ticket-title">
+                            CYBERWALL'S
+                            <br>
+                            BIRTHDAY
+                        </div>
+
+                        <div class="ticket-info">
+
+                            <p>
+                                ACT: I
+                            </p>
+
+                            <p>
+                                SEAT: ?
+                            </p>
+
+                            <p>
+                                ROW: L
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="ticket-bottom">
+                        KEEP THIS TICKET.
+                    </div>
+
+                </div>
+
+
+                <!-- FIRST PUZZLE -->
 
                 <div class="riddle-box">
 
-                    <h3>FIRST RIDDLE</h3>
+                    <h3>
+                        THE MISSING SEAT
+                    </h3>
 
                     <p>
-                        I have no voice,<br>
-                        yet I warn you of danger.
+                        A theater ticket was left behind.
                     </p>
 
                     <p>
-                        I have no eyes,<br>
-                        yet I watch the storm.
+                        Someone scratched out the seat number.
                     </p>
 
-                    <p>
-                        I spin without moving.
+                    <p class="puzzle-text">
+                        The only clue reads:
                     </p>
+
+                    <div class="clue">
+
+                        <p>
+                            <strong>
+                                "The storm has four stages."
+                            </strong>
+                        </p>
+
+                        <p>
+                            "The first brings the clouds."
+                        </p>
+
+                        <p>
+                            "The second brings the wind."
+                        </p>
+
+                        <p>
+                            "The third brings the rain."
+                        </p>
+
+                        <p>
+                            "The fourth brings the lightning."
+                        </p>
+
+                        <p>
+                            "Count what remains."
+                        </p>
+
+                    </div>
+
 
                     <p class="hint">
-                        What am I?
+                        How many stages are there?
                     </p>
 
                     <input
                         type="text"
                         id="riddle-1"
-                        placeholder="Enter your answer..."
+                        placeholder="Enter the number..."
                         autocomplete="off"
                     >
 
-                    <button onclick="checkRiddle(1)">
+                    <button id="riddle-1-button">
                         UNLOCK
                     </button>
 
-                    <p id="riddle-1-message" class="riddle-message"></p>
+                    <p
+                        id="riddle-1-message"
+                        class="riddle-message"
+                    ></p>
 
                 </div>
 
@@ -137,9 +247,9 @@
     </section>
 
 
-    <!-- ==============================
-         WEATHER ROOM
-    =============================== -->
+    <!-- =========================================
+         ACT II PLACEHOLDER
+         ========================================= -->
 
     <section id="weather-room" class="screen">
 
@@ -148,63 +258,30 @@
             <h1>THE WEATHER ROOM</h1>
         </div>
 
-        <div class="radar">
+        <div class="placeholder-room">
 
-            <div class="radar-circle"></div>
-            <div class="radar-sweep"></div>
-
-            <div class="radar-label">
-                NWS RADAR
+            <div class="radar-placeholder">
+                <div class="radar-circle"></div>
+                <div class="radar-sweep"></div>
+                <span>RADAR</span>
             </div>
 
-        </div>
-
-        <div class="riddle-box">
-
-            <h3>RADAR PUZZLE</h3>
+            <h2>
+                ACT II
+            </h2>
 
             <p>
-                The storm is moving.
+                The storm is waiting...
             </p>
-
-            <div class="weather-data">
-
-                <p>3:15 PM — 270°</p>
-                <p>3:20 PM — 285°</p>
-                <p>3:25 PM — 300°</p>
-                <p>3:30 PM — ???</p>
-
-            </div>
-
-            <p>
-                The direction increases by the same amount each time.
-            </p>
-
-            <p class="hint">
-                What direction comes next?
-            </p>
-
-            <input
-                type="text"
-                id="riddle-2"
-                placeholder="Enter degrees..."
-                autocomplete="off"
-            >
-
-            <button onclick="checkRiddle(2)">
-                SUBMIT
-            </button>
-
-            <p id="riddle-2-message" class="riddle-message"></p>
 
         </div>
 
     </section>
 
 
-    <!-- ==============================
-         STAGE
-    =============================== -->
+    <!-- =========================================
+         ACT III PLACEHOLDER
+         ========================================= -->
 
     <section id="stage-room" class="screen">
 
@@ -213,68 +290,24 @@
             <h1>THE STAGE</h1>
         </div>
 
-        <div class="stage">
+        <div class="placeholder-room">
 
-            <div class="curtain left"></div>
-            <div class="curtain right"></div>
+            <h2>
+                THE CURTAIN IS CLOSED.
+            </h2>
 
-            <div class="spotlight">
-
-                <div class="script">
-
-                    <h2>THE MISSING SCRIPT</h2>
-
-                    <p>
-                        The actors know their places.
-                    </p>
-
-                    <p>
-                        The storm knows its path.
-                    </p>
-
-                    <p>
-                        But one symbol is missing.
-                    </p>
-
-                    <div class="symbols">
-
-                        <span>☁</span>
-                        <span>⚡</span>
-                        <span>🌪</span>
-                        <span>🎭</span>
-                        <span>?</span>
-
-                    </div>
-
-                    <p class="hint">
-                        What belongs on the stage?
-                    </p>
-
-                    <input
-                        type="text"
-                        id="riddle-3"
-                        placeholder="Enter your answer..."
-                        autocomplete="off"
-                    >
-
-                    <button onclick="checkRiddle(3)">
-                        SUBMIT
-                    </button>
-
-                    <p id="riddle-3-message" class="riddle-message"></p>
-
-                </div>
-
-            </div>
+            <p>
+                Something is waiting behind it.
+            </p>
 
         </div>
 
     </section>
 
 
-    <!-- ==============================
-         LOKI ROOM
-    =============================== -->
+    <!-- =========================================
+         ACT IV PLACEHOLDER
+         ========================================= -->
 
     <section id="loki-room" class="screen">
 
@@ -283,59 +316,30 @@
             <h1>THE TRICKSTER'S ROOM</h1>
         </div>
 
-        <div class="loki-symbol">
-            🐍
-        </div>
+        <div class="placeholder-room loki-placeholder">
 
-        <div class="riddle-box loki-box">
+            <div class="loki-symbol">
+                🐍
+            </div>
 
-            <h3>THE TRICKSTER'S RIDDLE</h3>
-
-            <p>
-                I have no beginning.
-            </p>
+            <h2>
+                LOKI IS WATCHING.
+            </h2>
 
             <p>
-                I have no end.
+                Not everything in this room can be trusted.
             </p>
-
-            <p>
-                I return to where I started.
-            </p>
-
-            <p>
-                Yet I can unlock a door.
-            </p>
-
-            <p class="hint">
-                What am I?
-            </p>
-
-            <input
-                type="text"
-                id="riddle-4"
-                placeholder="Enter your answer..."
-                autocomplete="off"
-            >
-
-            <button onclick="checkRiddle(4)">
-                UNLOCK
-            </button>
-
-            <p id="riddle-4-message" class="riddle-message"></p>
 
         </div>
 
     </section>
 
 
-    <!-- ==============================
-         FINAL ACT
-    =============================== -->
+    <!-- =========================================
+         ACT V PLACEHOLDER
+         ========================================= -->
 
     <section id="final-room" class="screen">
-
-        <div class="final-curtain"></div>
 
         <div class="final-content">
 
@@ -343,51 +347,26 @@
                 ACT V
             </p>
 
-            <h1>THE FINAL ACT</h1>
+            <h1>
+                THE FINAL ACT
+            </h1>
 
             <p>
                 Fifteen voices are waiting.
             </p>
-
-            <div class="final-lock">
-
-                <h2>🔒</h2>
-
-                <p>
-                    FOUR ACTS.<br>
-                    FIFTEEN LETTERS.<br>
-                    ONE FINAL CODE.
-                </p>
-
-                <input
-                    type="text"
-                    id="final-code"
-                    placeholder="FINAL CODE"
-                    autocomplete="off"
-                >
-
-                <button onclick="checkFinalCode()">
-                    OPEN THE BOX
-                </button>
-
-                <p id="final-message" class="riddle-message"></p>
-
-            </div>
 
         </div>
 
     </section>
 
 
-    <!-- ==============================
-         LETTERS
-    =============================== -->
+    <!-- =========================================
+         BIRTHDAY REVEAL PLACEHOLDER
+         ========================================= -->
 
     <section id="letters-room" class="screen">
 
         <div class="birthday">
-
-            <div class="birthday-light"></div>
 
             <p class="final-small">
                 THE STORM HAS PASSED
@@ -402,20 +381,16 @@
                 You made it to the final act.
             </p>
 
-            <div id="letters-container">
-
-                <!-- Letters will be generated by JavaScript -->
-
-            </div>
+            <div id="letters-container"></div>
 
         </div>
 
     </section>
 
 
-    <!-- ==============================
+    <!-- =========================================
          LETTER MODAL
-    =============================== -->
+         ========================================= -->
 
     <div id="letter-modal">
 
@@ -433,6 +408,10 @@
 
     </div>
 
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
 
     <script src="script.js"></script>
 
