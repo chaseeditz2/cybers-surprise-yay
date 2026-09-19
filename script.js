@@ -3,35 +3,34 @@
    Cyberwall's Birthday Escape Room
    ========================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("THE FINAL ACT: JavaScript loaded.");
+document.addEventListener("DOMContentLoaded", function () {
+
+    console.log("THE FINAL ACT loaded successfully.");
 
     const enterButton = document.getElementById("enter-button");
 
     if (!enterButton) {
-        console.error("ERROR: #enter-button was not found.");
+        console.error("ENTER button was not found.");
         return;
     }
 
-    enterButton.addEventListener("click", () => {
-        console.log("ENTER THE THEATER clicked!");
+    enterButton.addEventListener("click", function () {
+
+        console.log("ENTER THE THEATER clicked.");
 
         const startScreen = document.getElementById("start-screen");
         const lobbyScreen = document.getElementById("lobby");
 
         if (!startScreen || !lobbyScreen) {
-            console.error("ERROR: Start screen or lobby not found.");
+            console.error("Start screen or lobby is missing.");
             return;
         }
 
         startScreen.classList.remove("active");
         lobbyScreen.classList.add("active");
 
-        // Small visual effect
-        document.body.classList.add("theater-enter");
+        console.log("Entered the theater.");
 
-        setTimeout(() => {
-            document.body.classList.remove("theater-enter");
-        }, 1000);
     });
+
 });
